@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="p-0 m-0 box-border w-full min-h-screen font-sans bg-neutral-100">
+  <!-- App Container -->
+  <div class="app-container w-full flex flex-col items-center p-10">
+    <!-- Header / Title -->
+    <header class="mb-4 sm:mb-8 text-center">
+      <h1 class="font-sans text-3xl md:text-4xl lg:text-6xl text-center text-neutral-700 font-bold">EISENHOWER <span class="text-blue-400">MATRIX</span></h1>
+      <h2 class=" font-sans text-sm md:text-md lg:text-lg text-neutral-500">A productivity, prioritization and time management framework!</h3>
+    </header>
+
+    <!-- Task Input Section -->
+    <section class="task-input-section w-full mx-20 mb-6 rounded-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-[2px] sm:gap-0 ">
+      <input type="text" id="taskInput" class="px-4 py-[5px] col-span-1  sm:col-span-2  border-black border text-sm md:text-md lg:text-lg placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:border-black" placeholder="Add a task..." />
+      <select id="prioritySelector" class="w-full p-2 border border-black bg-white text-gray-700 text-sm md:text-md lg:text-lg focus:outline-none  focus:border-black">
+          <option value="do" class="text-sm md:text-md lg:text-lg">Do</option>
+          <option value="schedule" class="text-sm md:text-md lg:text-lg">Schedule</option>
+          <option value="delegate" class="text-sm md:text-md lg:text-lg">Delegate</option>
+          <option value="delete" class="text-sm md:text-md lg:text-lg">Delete</option>
+      </select>
+
+      <button id="add" class="bg-neutral-700 hover:bg-black text-sm md:text-md lg:text-lg px-3 py-1 text-white">Add Task</button>
+    </section>
+
+    <!-- Task Filter Section -->
+    <section class="task-filter-section grid grid-cols-2 sm:grid-cols-6 justify-center items-center gap-3 sm:gap-6">
+      <button id="all" class="bg-gray-500 col-span-2 sm:col-span-1 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md  shadow-gray-600 hover:bg-gray-600 hover:translate-y-[2px]">All</button>
+      <button id="do" class="bg-green-600 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md  shadow-gray-600 hover:bg-green-700 hover:translate-y-[2px]">Do</button>
+      <button id="schedule" class="bg-blue-600 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md shadow-gray-600   hover:bg-blue-800 hover:translate-y-[2px]">Schedule</button>
+      <button id="delegate" class="bg-yellow-500 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md shadow-gray-600  hover:bg-yellow-700 hover:translate-y-[2px]">Delegate</button>
+      <button id="delete" class="bg-red-600 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md shadow-gray-600 hover:translate-y-[2px] hover:bg-red-700">Delete</button>
+      <button id="completed" class="bg-neutral-700 col-span-2 sm:col-span-1 text-sm md:text-md lg:text-lg text-white px-3 py-1 rounded-md w-full shadow-md  shadow-gray-600 hover:bg-neutral-900 hover:translate-y-[2px]">Completed</button>
+    </section>
+
+    <div class="container grid grid-cols-1 sm:grid-cols-2 gap-4 my-10 mx-auto">
+      <div id="b1" class="shadow-lg">
+          <h1 class="text-center text-md md:text-xl p-4 text-white bg-green-600 hover:bg-green-700">Do</h1>
+          <div id="quad1" dropzone="true" class="w-full bg-green-300 h-[200px] m-auto p-8 overflow-scroll"></div>
+      </div>
+      
+      <div id="b2" class="shadow-lg">
+          <h1 class="text-center text-md md:text-xl p-4 text-white bg-blue-700 hover:bg-blue-800">Schedule</h1>
+          <div id="quad2" dropzone="true" class="w-full bg-blue-300 h-[200px] m-auto  p-8 overflow-scroll"></div>
+        </div>
+
+      <div id="b3" class="shadow-lg">
+          <h1 class="text-center text-md md:text-xl p-4 text-white bg-yellow-500 hover:bg-yellow-600">Delegate</h1>
+          <div id="quad3" dropzone="true" class="w-full bg-yellow-300 h-[200px] m-auto  p-8 overflow-scroll"></div>
+      </div>
+
+      <div id="b4" class="shadow-lg">
+        <h1 class="text-center text-md md:text-xl p-4 text-white bg-red-600 hover:bg-red-700">Delete</h1>
+        <div id="quad4" dropzone="true" class="w-full bg-red-300 h-[200px] m-auto  p-8 overflow-scroll"></div>
+      </div>
+
+    </div>
+    <div id="b5" class="shadow-lg hidden w-[90%]">
+      <h1 class="text-center text-md md:text-xl p-4 text-white bg-neutral-600 hover:bg-neutral-700">Completed</h1>
+      <div id="quad5" dropzone="true" class="w-full bg-neutal-200 h-[200px] m-auto  p-8 overflow-scroll"></div>
+    </div>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="https://kit.fontawesome.com/f29a740784.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

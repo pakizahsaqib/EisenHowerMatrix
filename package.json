@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "build": "npm run build-css && cp src/index.html dist/index.html && cp src/script.js dist/script.js",
+    "build-css": "tailwindcss build -i ./src/input.css -o ./dist/output.css"
+  }
+}
